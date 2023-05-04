@@ -1,0 +1,170 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Gotham Rounded;
+}
+
+:root {
+  --hue-neutral: 200;
+  --hue-wrong: 0;
+  --hue-correct: 145;
+}
+
+body {
+  --hue: var(--hue-neutral);
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(var(--hue), 100%, 20%);
+}
+
+body.correct {
+  --hue: var(--hue-correct);
+}
+
+body.wrong {
+  --hue: var(--hue-wrong);
+}
+
+.container {
+  width: 600px;
+  max-width: 80%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0 10px 2px;
+}
+
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.btn {
+  --hue: var(--hue-neutral);
+  border: 1px solid hsl(var(--hue), 100%, 30%);
+  background-color: hsl(var(--hue), 100%, 50%);
+  border-radius: 5px;
+  font-size: large;
+  padding: 5px 10px;
+  color: white;
+  outline: none;
+}
+
+#question {
+font-size: large;
+}
+
+.btn:hover {
+  border-color: black;
+}
+
+.btn.correct {
+  --hue: var(--hue-correct);
+  color: black;
+}
+
+.btn.wrong {
+  --hue: var(--hue-wrong);
+}
+
+.start-btn, .next-btn {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
+input {
+  align-self: center;
+  width: auto;
+  height: auto;
+  font-size: 20px;
+  margin: 10px;
+  border-right:  1px springgreen;
+  border-block:  1px springgreen;
+  outline: none;
+  padding: 5px;
+  color: grey;
+}
+input {
+  display: block;
+  margin-block: 20px;
+}
+h2 {
+  text-align: center;
+  padding-block: 10px;
+  padding-top: 0px;
+}
+p#not {
+  background: white;
+  color:red;
+  padding-inline:10px;
+  display: none;
+}
+.pass, .login {
+  width: 620px;
+  height: fit-content;
+  position: absolute;
+  top: 20%;
+  background-image: linear-gradient(50deg,/*  red, orange, yellow */ cyan, pink, violet);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 15px 5px;
+}
+button.submit {
+padding-block: 10px;
+outline: none;
+padding-inline: 50px;
+border:0;
+border-radius: 50px;
+margin-block: 20px;
+margin-bottom: 50px;
+font-size: 20px;
+box-shadow: 0px 5px 20px 1px;
+}
+button.submit:hover {
+  cursor: pointer;
+}
+p#names {
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  color:white;
+  font-weight: 700;
+  width: fit-content;
+  padding: 15px;
+  background-color:  rgba(1,37,88, 0.5);
+  border-left: 5px solid  #012558;
+  
+}
+p#score {
+  font-size: 1.1rem;
+  color:white;
+  font-weight: 700;
+  width: fit-content;
+  padding: 15px;
+  background-color:  rgba(1,37,88, 0.5);
+  border-left: 5px solid  #012558;
+}
+.cred {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap:20px;
+}
